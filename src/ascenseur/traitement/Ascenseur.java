@@ -1,18 +1,26 @@
 package ascenseur.traitement;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Ascenseur {
-	public static final String IMMOBILE_OUVERT = "immobile_ouvert";
-	public static final String IMMOBILE_FERME = "immobile_ferme";
-	public static final String MONTANT = "monte";
-	public static final String DESCENDANT = "descendant";
-	String etat;//= { IMMOBILE_OUVERT; IMMOBILE_FERME; MONTANT; DESCENDANT}
-	boolean bloque;
-	int etage;
-	ArrayList<Requete> listeRequete; // A determiner quel type de collection
+public class Ascenseur{
+	private String etat;/*valeur: IMMOBILE_OUVERT; IMMOBILE_FERME; MONTANT; DESCENDANT
+						  de la classe Constantes */
+	private boolean bloque;
+	private int etage;
+	private ArrayList<Requete> listeRequetes; // A determiner quel type de collection
+	private StrategieAjoutRequete strategieAjoutRequete;
+	
+	public Ascenseur(StrategieAjoutRequete strategieAjoutRequete){
+		etat = Constantes.IMMOBILE_FERME;
+		bloque = false;
+		etage = 0;
+		listeRequetes = new ArrayList<Requete>();
+		this.strategieAjoutRequete = strategieAjoutRequete;
+	}
 	
 	public void bloquer(){
+		//A faire
 		bloque = true;
 	}
 	
@@ -21,14 +29,18 @@ public class Ascenseur {
 	}
 	
 	public void ajouterRequete(Requete requete){
-		
+		listeRequetes = strategieAjoutRequete.ajouterRequete(listeRequetes, requete);
 	}
 	
 	public void creerRequeteInterne(int etage){
-		
+		ajouterRequete(new RequeteInterne(etage));
 	}
 	
 	public void action(){
 		
+	}
+	
+	public ArrayList<Requete> requetes(){
+		return listeRequetes;
 	}
 }
