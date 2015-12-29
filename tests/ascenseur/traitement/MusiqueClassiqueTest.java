@@ -8,8 +8,6 @@ import org.junit.Test;
 
 public class MusiqueClassiqueTest {
 
-	protected AscenseurHautDeGamme asc = new AscenseurHautDeGamme();
-	
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -19,8 +17,7 @@ public class MusiqueClassiqueTest {
 	}
 
 	@Test
-	public void test() throws Exception {
-		System.out.println(asc.getMusique());
+	public void test() {
 		fail("Not yet implemented");
 	}
 
