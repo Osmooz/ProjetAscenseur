@@ -2,9 +2,9 @@ package ascenseur.traitement;
 
 import org.junit.Test;
 
-public class MusiqueClassiqueTest {
-	
-	MusiqueClassique mus = new MusiqueClassique();
+public class MusiqueMuetteTest {
+
+	MusiqueMuette mus = new MusiqueMuette();
 	
 	@Test
 	public void test() {
