@@ -6,7 +6,7 @@ public class Constantes {
 	//Constantes pour l'etat d'un ascenseur
 	public static final String IMMOBILE_OUVERT = "immobile_ouvert";
 	public static final String IMMOBILE_FERME = "immobile_ferme";
-	public static final String MONTANT = "monte";
+	public static final String MONTANT = "montant";
 	public static final String DESCENDANT = "descendant";
 	
 	//Constantes pour la demande d'une requete externe
