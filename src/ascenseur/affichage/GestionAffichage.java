@@ -19,7 +19,7 @@ public class GestionAffichage {
 			System.out.println("Nb ascenseur : ");
 			int nbAscenseur = sc.nextInt();
 			
-			String[][] immeuble = new String[(nbAscenseur * 3) + 1][nbEtage]; // ici aussi
+			String[][] immeuble = new String[(nbAscenseur * 3) + 1][nbEtage]; // ici aussi !
 			for (int i = 0; i < immeuble.length - 1; ++i) {
 					for (int j = 0; j < immeuble[i].length; ++j) {
 						immeuble[i][j] = " "; // faut qu'on se mette daccord sur la tete de l'affichage
